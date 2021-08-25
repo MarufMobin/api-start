@@ -45,5 +45,12 @@ document.getElementById('posts').addEventListener('click',function(){
 
 
 function displayUsers(data){
-    console.log(data)
+    const ul =  document.getElementById('users');
+    for( const user of data){
+      const li = document.createElement('li');
+        li.innerText = `Name : ${user.name} ALso email : ${user.email}`;
+
+      ul.appendChild(li);
+       
+    }
 }
